@@ -55,9 +55,7 @@ iniciar() {
     iptables -A INPUT -p udp --dport 161 -j ACCEPT  # SNMP
     iptables -A INPUT -p udp --dport 162 -j ACCEPT  # SNMP-TRAP
 
-    # Log para pacotes descartados (opcional)
-    iptables -A INPUT -j LOG --log-prefix "IPTABLES DROPPED: " --log-level 4
-
+    
     echo "Regras aplicadas com sucesso."
 }
 
