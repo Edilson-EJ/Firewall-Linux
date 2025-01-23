@@ -41,23 +41,29 @@ Abra o script firewall.sh e ajuste as configurações conforme suas necessidades
 
 ## 3. Torne o script executável
 
-        chmod +x firewall.sh
+        sudo chmod +x /usr/local/bin/firewall.sh
 
-## 4. Execute o script
+## 4. Visualizar as regras do firewall antes de aplicar
+
+Para verificar as regras do firewall atuais, use:
+
+        sudo iptables -L -v -n
+
+## 5. Execute o script
 
 Para gerenciar o firewall, utilize os seguintes comandos:
 
 - Iniciar o firewall:
 
-        sudo ./firewall.sh start
+        sudo /usr/local/bin/firewall.sh start
 
 - Parar o firewall:
 
-        sudo ./firewall.sh stop
+        sudo /usr/local/bin/firewall.sh stop
 
 - Reiniciar o firewall:
 
-        sudo ./firewall.sh restart
+        sudo /usr/local/bin/firewall.sh restart
 
 ## 🔒 Portas e Protocolos Configurados
 
